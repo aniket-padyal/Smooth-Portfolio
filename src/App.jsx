@@ -2,6 +2,9 @@ import Navbar from "./components/Navbar";
 import Introduction from "./components/Introduction";
 import HeroText from "./components/HeroText";
 import ScrollMarquee from "./components/ScrollMarquee";
+import Expertise from "./components/Expertise";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -10,6 +13,9 @@ function App() {
       <Introduction/>
       <HeroText/>
       <ScrollMarquee/>
+      <Expertise/>
+      <Projects/>
+      <Footer/>
     </>
   );
 }

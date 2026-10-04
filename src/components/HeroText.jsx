@@ -1,16 +1,4 @@
 
-
-// const HeroText = () => {
-//   return (
-//     <div className="h-screen flex items-center ">
-//         <p className="text-3xl text-center p-8 ">Designs and builds performance-driven digital experiences. Combining a strong background in visual design with modern frontend development, wireframes are converted into clean, interactive, and responsive web products.</p>
-//     </div>
-//   )
-// }
-
-// export default HeroText
-
-// components/TextReveal.jsx
 import { useLayoutEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
