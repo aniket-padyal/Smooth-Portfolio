@@ -1,9 +1,15 @@
-import Navbar from "./components/common/Navbar";
+import Navbar from "./components/Navbar";
+import Introduction from "./components/Introduction";
+import HeroText from "./components/HeroText";
+import ScrollMarquee from "./components/ScrollMarquee";
 
 function App() {
   return (
     <>
       <Navbar />
+      <Introduction/>
+      <HeroText/>
+      <ScrollMarquee/>
     </>
   );
 }

@@ -5,13 +5,13 @@ const navLinks = ["Home", "What I Build", "Get In Touch"];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLight, setIsLight] = useState(true);
+  // const [isLight, setIsLight] = useState(true);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
-  const toggleTheme = () => setIsLight((prev) => !prev);
+  // const toggleTheme = () => setIsLight((prev) => !prev);
 
   return (
-    <nav className="relative flex items-center justify-between w-full px-10 py-5 ">
+    <nav className="fixed w-screen flex items-center justify-between px-10 py-5  ">
       <h1 className="text-4xl ">aniket.dev</h1>
 
       {/* Menu Toggle Button */}
@@ -19,7 +19,7 @@ const Navbar = () => {
         type="button"
         onClick={toggleMenu}
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="relative z-20 h-6 w-6 flex items-center justify-center cursor-pointer bg-[#ebeae8] p-6 rounded-full "
+        className="relative z-10 h-14 w-14 flex items-center justify-center cursor-pointer bg-ink text-surface p-6 rounded-full "
       >
         <Menu
           size={25}
@@ -36,7 +36,7 @@ const Navbar = () => {
 
       {/* Floating Menu Card */}
       <div
-        className={`absolute top-4 right-4 min-w-55 rounded-2xl px-7 py-5 shadow-[0px_7px_29px_0px_rgba(100,100,111,0.2)] bg-[#ebeae8] transition-all duration-300 ease-out
+        className={`absolute top-4 right-4 min-w-55 rounded-2xl px-7 py-5 bg-surface transition-all duration-300 ease-out 
           ${
             isMenuOpen
               ? "translate-y-0 scale-100 opacity-100 "
@@ -45,9 +45,9 @@ const Navbar = () => {
           `}
       >
         {/* Navigation Links */}
-        <h2 className="mb-4 cursor-default text-xl ">Menu</h2>
+        <h2 className="mb-4 cursor-default text-2xl ">Menu</h2>
 
-        <ul className="flex flex-col gap-3 text-2xl ">
+        <ul className="flex flex-col gap-3 text-xl ">
           {navLinks.map((link) => (
             <li
               key={link}
@@ -68,14 +68,14 @@ const Navbar = () => {
         </ul>
 
         {/* for toggling between modes */}
-        <button
+        {/* <button
           type="button"
           className="w-7 mt-4 cursor-pointer transition-transform duration-300 hover:scale-110 "
           onClick={toggleTheme}
           aria-label="Toggle theme"
         >
           {isLight ? <Moon size={26} /> : <Sun size={26} />}
-        </button>
+        </button> */}
       </div>
     </nav>
   );
