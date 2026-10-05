@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
-
-const navLinks = ["Home", "What I Build", "Get In Touch"];
+import { navLinks } from "../data/constant";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

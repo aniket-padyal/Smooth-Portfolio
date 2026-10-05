@@ -1,35 +1,3 @@
-// import Marquee from "../scrollEffects/Marquee";
-
-// const Footer = () => {
-//   return (
-//     <footer id="get-in-touch" className="pt-10 bg-ink text-bg">
-
-// <div className="md:flex justify-between items-start mx-6 py-15 " >
-//     <h1 className="text-4xl sm:text-6xl mb-5" >aniket.dev</h1>
-// <div className="flex flex-col gap-2 ">
-//         <a href="mailto:aniketpadyal07@gmail.com" className="text-xl hover:opacity-70">
-//           aniketpadyal07@gmail.com
-//         </a>
-
-//         <ul className="flex gap-6 text-sm">
-//           <li><a href="https://github.com/yourname" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-//           <li><a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-//         </ul>
-
-//         <p className="text-sm opacity-60">© 2026 aniket.dev</p>
-//       </div>
-// </div>
-
-//        <Marquee
-//         text="Let's work together" 
-//         className="text-[12vw] font-semibold uppercase leading-none px-14"
-//       />
-//     </footer>
-//   );
-// };
-
-// export default Footer;
-
 import Marquee from "../scrollEffects/Marquee";
 
 const Footer = () => {

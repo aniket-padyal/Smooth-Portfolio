@@ -50,8 +50,11 @@ const TextReveal = () => {
       >
       Designs and builds performance-driven digital experiences. Combining a strong background in visual design with modern frontend development, wireframes are converted into clean, interactive, and responsive web products.
       </p>
+      
     </section>
+    
   )
+  
 }
 
 export default TextReveal

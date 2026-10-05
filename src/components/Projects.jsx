@@ -3,32 +3,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Marquee from "../scrollEffects/Marquee";
+import {projects} from "../data/constant"
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
-
-const projects = [
-  {
-    id: "01",
-    title: "Imitation Jewellery Store",
-    tag: "E-commerce · React",
-    image: "https://cdn.prod.website-files.com/6990c09b4ef3c1f153c551d9/6998821457b696838c612146_Mockup%2021.avif",
-    link: "https://your-live-link.com",
-  },
-  {
-    id: "02",
-    title: "Habit Tracker",
-    tag: "React · Tailwind",
-    image: "/projects/habit.jpg",
-    link: "https://your-live-link.com",
-  },
-  {
-    id: "03",
-    title: "Another Project",
-    tag: "React · GSAP",
-    image: "/projects/third.jpg",
-    link: "https://your-live-link.com",
-  },
-];
 
 const Projects = () => {
   const root = useRef(null);
