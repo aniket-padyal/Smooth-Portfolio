@@ -18,7 +18,7 @@ const Navbar = () => {
         type="button"
         onClick={toggleMenu}
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="relative z-10 h-14 w-14 flex items-center justify-center cursor-pointer bg-ink text-surface p-6 rounded-full "
+        className="relative z-10 h-12 w-12 flex items-center justify-center cursor-pointer bg-ink text-surface p-6 rounded-full "
       >
         <Menu
           size={25}
@@ -35,7 +35,7 @@ const Navbar = () => {
 
       {/* Floating Menu Card */}
       <div
-        className={`absolute top-4 right-4 min-w-55 rounded-2xl px-7 py-5 bg-surface transition-all duration-300 ease-out 
+        className={`absolute top-4 right-4 min-w-55 rounded-2xl px-7 py-5 bg-ink text-surface transition-all duration-300 ease-out 
           ${
             isMenuOpen
               ? "translate-y-0 scale-100 opacity-100 "

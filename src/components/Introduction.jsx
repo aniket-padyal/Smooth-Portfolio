@@ -1,16 +1,15 @@
-import { useLayoutEffect, useRef } from "react"
-import gsap from "gsap"
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 
 const skills = [
-  { label: "Next", style: "bg-white text-black" },
+  // { label: "Next", style: "bg-white text-black" },
   { label: "React", style: "bg-neutral-800 text-white" },
   { label: "Tailwind", style: "text-white" },
   { label: "GSAP", style: "bg-neutral-800 text-white" },
-]
+];
 
 const Introduction = () => {
-  const cardRef = useRef(null)
-  const shadowRef = useRef(null)
+  const cardRef = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -22,21 +21,11 @@ const Introduction = () => {
         ease: "sine.inOut",
         yoyo: true,
         repeat: -1,
-      })
+      });
+    });
 
-      // shadow shrinks and fades as the card rises
-      gsap.to(shadowRef.current, {
-        scaleX: 0.75,
-        opacity: 0.15,
-        duration: 2.4,
-        ease: "sine.inOut",
-        yoyo: true,
-        repeat: -1,
-      })
-    })
-
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center">
@@ -51,7 +40,12 @@ const Introduction = () => {
             src="https://4kwallpapers.com/images/wallpapers/lionel-messi-soccer-1920x1200-9789.jpeg"
             alt="Aniket's profile photo"
           />
-          {["-left-1 -top-1", "-right-1 -top-1", "-left-1 -bottom-1", "-right-1 -bottom-1"].map((pos) => (
+          {[
+            "-left-1 -top-1",
+            "-right-1 -top-1",
+            "-left-1 -bottom-1",
+            "-right-1 -bottom-1",
+          ].map((pos) => (
             <span
               key={pos}
               className={`absolute ${pos} h-2 w-2 border border-violet-500 bg-white`}
@@ -60,7 +54,9 @@ const Introduction = () => {
         </div>
 
         {/* name + role */}
-        <h1 className="mt-6 text-center text-4xl font-light tracking-wide">Aniket Padyal</h1>
+        <h1 className="mt-6 text-center text-4xl font-light tracking-wide">
+          Aniket Padyal
+        </h1>
         <p className="mt-3 text-center font-mono text-xs uppercase tracking-[0.3em] text-neutral-400">
           [Frontend Developer]
         </p>
@@ -68,7 +64,10 @@ const Introduction = () => {
         {/* skill chips */}
         <div className="mt-5 flex flex-wrap justify-center gap-2">
           {skills.map((s) => (
-            <span key={s.label} className={`rounded-full px-4 py-1 text-[8px] sm:text-xs ${s.style}`}>
+            <span
+              key={s.label}
+              className={`rounded-full px-4 py-1 text-[8px] sm:text-xs ${s.style}`}
+            >
               {s.label}
             </span>
           ))}
@@ -87,14 +86,8 @@ const Introduction = () => {
           <span>2026</span>
         </div>
       </div>
-
-      {/* ground shadow */}
-      <div
-        ref={shadowRef}
-        className="mt-10 h-4 w-48 rounded-full bg-black/60 blur-xl sm:w-64"
-      />
     </div>
-  )
-}
+  );
+};
 
-export default Introduction
+export default Introduction;
